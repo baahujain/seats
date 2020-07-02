@@ -38,7 +38,7 @@ FOREIGN KEY(TowerId) REFERENCES Tower(TowerId)
 
 
 
-CREATE TABLE Wing(WingId int not null,																										
+CREATE TABLE Wing(WingId int not null AUTO_INCREMENT,																										
 WingName varchar(255) not null,																										
 FloorId int not null,																										
 PRIMARY KEY(WingId),																										
