@@ -1,0 +1,6 @@
+Query To Join all tables:
+SELECT * FROM Organization 
+join Site on Organization.OrganizationId=Site.OrganizationId
+join Tower on Tower.SiteId = Site.SiteId
+join Floor on Floor.TowerId = Tower.TowerId
+left outer join Wing on Wing.FloorId = Floor.FloorId
