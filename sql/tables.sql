@@ -48,9 +48,11 @@ FOREIGN KEY(FloorId) REFERENCES Floor(FloorId)
 CREATE TABLE Seat(Seatid int not null AUTO_INCREMENT ,																										
 SeatNumber varchar(100) not null,																										
 FloorId int not null,																																																				
-Shared boolean not null,																										
+Shared boolean not null,				
+OrganizationId int not null,
 PRIMARY KEY (SeatId),																										
-FOREIGN KEY (FloorId) REFERENCES Floor(FloorId)																																																				
+FOREIGN KEY (FloorId) REFERENCES Floor(FloorId)	,
+FOREIGN KEY (OrganizationId) REFERENCES Organization(OrganizationId)
 );																										
 
 
