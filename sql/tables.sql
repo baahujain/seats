@@ -6,6 +6,8 @@ PRIMARY KEY(OrganizationId)
 );	
 
 CREATE TABLE AdminDetails( AdminId int not null AUTO_INCREMENT,
+FirstName varchar(255) not null ,
+LastName varchar(255) not null ,
 EmailId varchar(255) not null ,
 Designation varchar(255) not null,
 Phone varchar(255) not null,
