@@ -3,7 +3,16 @@
 CREATE TABLE Organization(OrganizationId int not null AUTO_INCREMENT,
 OrganizationName varchar(255) not null ,
 PRIMARY KEY(OrganizationId)
-);																								
+);	
+
+CREATE TABLE AdminDetails( AdminId int not null AUTO_INCREMENT,
+EmailId varchar(255) not null ,
+Designation varchar(255) not null,
+Phone varchar(255) not null,
+OrganizationId int not null,
+PRIMARY KEY (AdminId),
+FOREIGN KEY (OrganizationId) REFERENCES Organization(OrganizationId)
+);
 
 CREATE TABLE Employee( EmployeeId int not null,																										
 OrganizationId int not null,																										
